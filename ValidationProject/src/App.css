@@ -1,0 +1,60 @@
+.notMember{
+  margin-left: 140px;
+  margin-top: 25px;
+}
+
+.navH{
+  background-color: #3f72af;
+}
+
+.spanE{
+  color: white;
+}
+
+.dropBtn{
+  color: white;
+}
+
+.foot{
+margin-top: 90px;
+}
+.forgotHeading{
+  text-align: center;
+  
+}
+.forgotE{
+  text-align: center;
+}
+.recover{
+  align-items: center;
+}
+.testing{
+  text-align: center;
+}
+.TutorialPadding{
+  padding: 15px;
+  margin: 10px;
+  color: #112d4e;
+}
+.Thead{
+  font-weight: bold;
+}
+.tab{
+  background-color: #dbe2ef;
+}
+.linkColor{
+  color: #112d4e;
+}
+.correctO{  
+  margin-bottom: 15px;
+  width: 50%;
+
+  
+}
+.incorrectO{
+  margin-bottom: 15px;
+  width: 50%;
+}
+.addNew{
+  margin:3% 0 3% 40%;
+}
