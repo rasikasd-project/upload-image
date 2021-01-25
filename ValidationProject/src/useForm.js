@@ -1,4 +1,5 @@
 import { useState , useEffect } from 'react';
+import validate from './validateInfo'
 
 const useForm = (callback , validate) => {
 
@@ -14,27 +15,20 @@ const useForm = (callback , validate) => {
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
   
-    const reqBody = {
-        method : 'POST',
-        headers : { 'Content-type': 'application/json',
-        'Access-Control-Allow-Origin' : '*'},
-        // body : JSON.stringify({
-        //     "firstName" : user.firstName,
-        //     "lastName" : user.lastName,
-        //     "emailId" : user.emailId,
-        //     "mobileNo" : user.mobileNo,
-        //     "password" : user.password
-        // })
-        body : JSON.stringify(user)
-    };
-    const postUser = async (e) => {
-        // const response = await fetch('http://localhost:8080/create_user',reqBody);
-        // const data = await response;
-        // console.log(user);
-        setErrors(validate(user));
-        setIsSubmitting(true);
-
-    }
+    // const reqBody = {
+    //     method : 'POST',
+    //     headers : { 'Content-type': 'application/json',
+    //     'Access-Control-Allow-Origin' : '*'},
+    //     // body : JSON.stringify({
+    //     //     "firstName" : user.firstName,
+    //     //     "lastName" : user.lastName,
+    //     //     "emailId" : user.emailId,
+    //     //     "mobileNo" : user.mobileNo,
+    //     //     "password" : user.password
+    //     // })
+    //     body : JSON.stringify(user)
+    // };
+   
     const handleChange = (e) => {
         const {name,value} = e.target;
 
@@ -43,8 +37,21 @@ const useForm = (callback , validate) => {
                 ...prevValue,
                 [name] : value
             }
-        });
+        })
     };
+
+
+    const postUser =  (e) => {
+        // const response = await fetch('http://localhost:8080/create_user',reqBody);
+        // const data = await response;
+        // console.log(user);
+        e.preventDefault();
+        setErrors(validate(user));
+        setIsSubmitting(true);
+
+        //return {postUser};
+
+    }
 
     useEffect(
         () => {

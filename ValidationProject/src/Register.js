@@ -23,7 +23,7 @@ const Register = ({ submitForm }) => {
                 type='text'
                 name='firstName'
                 placeholder='Enter your firstName'
-                value={user.firstNmae}
+                value={user.firstName}
                 onChange={handleChange}
               />
               {errors.firstName && <p>{errors.firstName}</p>}

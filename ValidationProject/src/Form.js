@@ -3,6 +3,7 @@ import Nav from "./Navbar";
 import Register from './Register';
 import './Form.css';
 import Login from './Login';
+import FormSuccess from './FormSuccess';
 
 
 
@@ -26,7 +27,7 @@ const Form = () => {
         {!isSubmitted ? (
           <Register submitForm={submitForm} />
         ) : (
-          <Login />
+          <FormSuccess />
         )}
       </div>
     </>
